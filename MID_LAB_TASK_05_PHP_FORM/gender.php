@@ -1,12 +1,12 @@
 <?php
 
-$email="";
+$ugender="";
 $error="";
 if(isset($_REQUEST['submit'])){
-	if(_REQUEST['mail']==null){
-    	$error="Invalid email!";
+	if(_REQUEST['date']==null){
+    	$error="Invalid !";
 	}
-	else{$email=$_REQUEST['mail'];}
+	else{$ugender=$_REQUEST['date'];}
 }
 
 ?>
@@ -16,13 +16,14 @@ if(isset($_REQUEST['submit'])){
 	<title></title>
 </head>
 <body>
-	<form method="POST" action="email.php">
+	<form method="POST" action="dob.php">
 
 	  
 	  	<fieldset>
         <legend>Email</legend>
 	  		
-        <input type="text" name="mail" value="<?=$email?>"><td><?=$error?></td></br>
+        <input type="radio" name="gender" value="<?=$udate?>">>
+	  			</br>
 	  		
 	  	<input type="submit" value="Submit">
 	  </fieldset>

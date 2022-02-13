@@ -16,13 +16,13 @@ if(isset($_REQUEST['submit'])){
 	<title></title>
 </head>
 <body>
-	<form method="POST" action="name.php">
+	<form method="POST" action="#">
 
 	  
 	  	<fieldset>
         <legend>Name</legend>
 	  		
-        <input type="text" name="name" value="<?=$uname?>"><td><?=$error?></td></br>
+        <input type="text" name="name" value="<?=$uname?>"><label><?=$error?></label></br>
 	  		
 	  	<input type="submit" value="Submit">
 	  </fieldset>
