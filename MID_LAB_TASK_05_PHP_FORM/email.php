@@ -1,12 +1,12 @@
 <?php
 
-$email="";
+$mail="";
 $error="";
 if(isset($_REQUEST['submit'])){
-	if(_REQUEST['mail']==null){
+	if($_REQUEST['mail']==null){
     	$error="Invalid email!";
 	}
-	else{$email=$_REQUEST['mail'];}
+	else{$mail=$_REQUEST['mail'];}
 }
 
 ?>
@@ -16,17 +16,32 @@ if(isset($_REQUEST['submit'])){
 	<title></title>
 </head>
 <body>
-	<form method="POST" action="email.php">
+	<form method="POST" action="">
 
 	  
 	  	<fieldset>
-        <legend>Email</legend>
-	  		
-        <input type="text" name="mail" value="<?=$email?>"><td><?=$error?></td></br>
-	  		
-	  	<input type="submit" value="Submit">
+        <legend>EMAIL</legend>
+	  	<table>
+			<tr>
+				<td></td>
+				<td>
+					<input type="text" name="mail" value="<?=$mail?>"></br>
+
+				</td>
+				<td>
+					<?=$error?>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" name="submit" value="submit">
+				</td>
+			</tr>
+		</table>
 	  </fieldset>
 	</form>
 </body>
 
 </html>
+

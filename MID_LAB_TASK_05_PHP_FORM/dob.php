@@ -1,12 +1,12 @@
 <?php
 
-$udate="";
+$dateofBirth="";
 $error="";
 if(isset($_REQUEST['submit'])){
-	if(_REQUEST['date']==null){
+	if($_REQUEST['dateofBirth']==null){
     	$error="Invalid !";
 	}
-	else{$udate=$_REQUEST['date'];}
+	else{$udate=$_REQUEST['dateofBirth'];}
 }
 
 ?>
@@ -16,18 +16,32 @@ if(isset($_REQUEST['submit'])){
 	<title></title>
 </head>
 <body>
-	<form method="POST" action="dob.php">
+	<form method="POST" action="">
 
 	  
 	  	<fieldset>
-        <legend>Email</legend>
-	  		
-        <input type="date" name="date" value="<?=$udate?>">>
-	  			</br>
-	  		
-	  	<input type="submit" value="Submit">
+        <legend>Date Of Birth</legend>
+	  	<table>
+			<tr>
+				<td></td>
+				<td>
+					 <input type="date" name="dateofBirth" value="<?=$dateofBirth?>">
+
+				</td>
+				<td>
+					<?=$error?>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" name="submit" value="submit">
+				</td>
+			</tr>
+		</table>
 	  </fieldset>
 	</form>
 </body>
 
 </html>
+
